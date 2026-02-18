@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="result-container {{ style_class }}">
+        
+        <h1>{{ status }}!</h1>
+        
+        <img src="{{ image_url }}" alt="Result Image" class="result-image">
+
+        <div class="score-circle">
+            {{ score }}%
+        </div>
+
+        <div class="message-box">
+            <p>{{ message }}</p>
+        </div>
+
+        <div class="share-section">
+            <p>Share your success with others!</p>
+            
+            <a href="https://wa.me/?text=I%20just%20checked%20my%20predicted%20score%20on%20the%20Student%20Performance%20AI!%0A%0AResult:%20{{ status }}%20({{ score }}%)%0A%0ACheck%20it%20out%20here:%0Ahttp://127.0.0.1:5000" 
+               target="_blank" 
+               class="whatsapp-btn">
+               Share Result & Link 📱
+            </a>
+        </div>
+
+        <div class="navigation">
+            <br>
+            <a href="/" class="btn-back">← Back to Predictor</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

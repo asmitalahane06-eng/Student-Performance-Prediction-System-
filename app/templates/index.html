@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Student Predictor</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Features</h2>
+        <form action="/predict" method="post">
+            <div class="input-group">
+                <label>Study Hours</label>
+                <input type="number" name="h1" required step="any">
+            </div>
+            <div class="input-group">
+                <label>Attendance (%)</label>
+                <input type="number" name="h2" required step="any">
+            </div>
+            <div class="input-group">
+                <label>Previous Score</label>
+                <input type="number" name="h3" required step="any">
+            </div>
+            <button type="submit" class="btn">Predict Now</button>
+        </form>
+    </div>
+    <div class="main-content">
+        <h1>Student Performance AI 📊</h1>
+        <p>Enter your metrics on the left to see your predicted academic outcome.</p>
+    </div>
+</body>
+</html>
